@@ -1,8 +1,9 @@
-import axios from 'axios';
+import axios, { AxiosInstance } from 'axios';
 
-const myKittenAxios = axios.create({
+const myKittenAxios: AxiosInstance = axios.create({
   baseURL: 'http://localhost:3000',
-  timeout: 10000,
+  timeout: 5000,
+  timeoutErrorMessage: '네트워크 상태가 좋지 않다냥...',
   headers: {
     'Content-Type': 'application/json',
   },
