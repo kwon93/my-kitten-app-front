@@ -1,12 +1,10 @@
+import MainPage from './components/layout/MainPage.tsx';
+
 function App() {
 
-    return (
-        <div>
-            <p>
-                myKitten
-            </p>
-        </div>
-    )
+  return (
+    <MainPage />
+  );
 }
 
-export default App
+export default App;
