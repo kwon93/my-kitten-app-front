@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from './header/Button.tsx';
 import Logo from './header/Logo.tsx';
 import { Link } from 'react-router-dom';
+import { Button } from '../ui/button.tsx';
 
 const Header: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Logo />
         <Link to="/signup">
-          <Button />
+          <Button variant="ghost">회원가입</Button>
         </Link>
       </div>
     </header>
