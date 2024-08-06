@@ -1,6 +1,6 @@
 import React from 'react';
 import CategoryItem from './CategoryItem.tsx';
-import { IconProps } from '../../types/IconProps.ts';
+import { IconProps } from '../../../types/IconProps.ts';
 
 
 const categories = [

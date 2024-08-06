@@ -1,10 +1,10 @@
 import React from 'react';
 import Header from './Header.tsx';
 import NavBar from './Navigation/NavBar.tsx';
-import SearchBar from '../common/SearchBar.tsx';
-import Banner from '../common/Banner.tsx';
-import CategoryGrid from '../category/CategoryGrid.tsx';
-import ImageCarousel from '../common/ImageCarousel.tsx';
+import SearchBar from '../main/SearchBar.tsx';
+import Banner from '../main/Banner.tsx';
+import CategoryGrid from '../main/category/CategoryGrid.tsx';
+import ImageCarousel from '../main/ImageCarousel.tsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import SignUp from '../../features/member/SignUp.tsx';
 

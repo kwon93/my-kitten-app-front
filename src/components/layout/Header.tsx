@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '../common/ui/Button.tsx';
-import Logo from '../common/ui/Logo.tsx';
+import Button from './header/Button.tsx';
+import Logo from './header/Logo.tsx';
 import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
