@@ -8,11 +8,11 @@ const NavBar: React.FC = () => {
       <div className="flex justify-between p-2">
         <div className="container mx-auto h-full flex justify-between items-center px-10 max-w-md">
           <Link to={'/'}>
-            <NavItem icon="iconHome" label="홈" />
+            <NavItem icon="iconHome" label="HOME" />
           </Link>
-          <NavItem icon="iconGallery" label="갤러리" />
-          <NavItem icon="iconCat2" label="고양이 정보" />
-          <NavItem icon="iconUser" label="내 정보" />
+          <NavItem icon="iconGallery" label="GALLERY" />
+          <NavItem icon="iconCat2" label="MY PET" />
+          <NavItem icon="iconUser" label="MY INFO" />
         </div>
       </div>
     </nav>

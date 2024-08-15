@@ -1,16 +1,16 @@
 import myKittenAxios from './axiosConfig.ts';
 
-export const get = async () => {
+export const get = async (url: string) => {
   try {
-    await myKittenAxios.get('http://localhost:3000/api');
+    await myKittenAxios.get(`http://localhost:3000/api/${url}`);
   } catch (error) {
     console.log(error);
   }
 };
 
-export const post = async () => {
+export const post = async (url: string) => {
   try {
-    await myKittenAxios.post('http://localhost:3000/api');
+    return await myKittenAxios.post(`api/${url}`);
   } catch (error) {
     console.log(error);
   }
