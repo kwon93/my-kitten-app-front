@@ -1,4 +1,6 @@
 import myKittenAxios from './axiosConfig.ts';
+import { AxiosError } from 'axios';
+import { list } from 'postcss';
 
 export const get = async (url: string) => {
   try {
@@ -8,20 +10,16 @@ export const get = async (url: string) => {
   }
 };
 
-export const post = async (url: string) => {
-  try {
-    return await myKittenAxios.post(`api/${url}`);
-  } catch (error) {
-    console.log(error);
-  }
+//TODO data TYPE 지정하기
+export const post = async (url: string, data) => {
+  return await myKittenAxios.post(url, data)
+    .catch((error: AxiosError) => {
+      const errorResponse = error.response?.data;
+      return Promise.reject(errorResponse);
+    });
 };
 
 export const patch = async () => {
-  try {
-    await myKittenAxios.patch('http://localhost:3000/api');
-  } catch (error) {
-    console.log(error);
-  }
 };
 
 export const deleteRequest = async () => {

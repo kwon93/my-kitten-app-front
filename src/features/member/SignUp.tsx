@@ -5,7 +5,6 @@ import { Label } from '../../components/ui/label.tsx';
 import { Button } from '../../components/ui/button.tsx';
 import { SignUpData } from '../../types/member/SignUpData.ts';
 import myKittenAxios from '../../api/axiosConfig.ts';
-import axios from 'axios';
 
 
 const SignUp: React.FC = () => {
@@ -25,12 +24,14 @@ const SignUp: React.FC = () => {
   };
 
   const handleSignUpSubmit = async () => {
-    const response = await axios.post('http://localhost:3000/member/signup', signUpData, {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-    console.log(response);
+    myKittenAxios.post('member/signup', signUpData)
+      .then(response => {
+        console.log(response);
+        alert('회원가입에 성공했습니다.');
+      })
+      .catch((e) => {
+        console.log(e.response.data.message);
+      });
   };
 
   return (
