@@ -14,7 +14,7 @@ const MainPage: React.FC = () => {
       <div className="flex flex-col h-screen">
         <div className="flex-grow flex-col max-w-md mx-auto w-full bg-white shadow-md">
           <Header />
-          <main className="flex-grow flex flex-col overflow-y-auto mt-auto px-4 py-4 ">
+          <main className="flex-grow flex flex-col overflow-y-auto mt-auto px-4 py-4 " id="myKittenMain">
             <Routes>
               <Route path="/signup" element={<SignUp />} />
               <Route path="/" element={
